@@ -1,12 +1,12 @@
 import base64
 from PIL import Image as PILImage
-import openai
+from langchain_openai import OpenAI
 import streamlit as st
 
 
 api_key = "sk-proj-ReIwb6sECBqdpCkiqSq8T3BlbkFJYzLbXtecaS12V7yMpJLX"
 
-openai.api_key = api_key
+OpenAI.api_key = api_key
 
 
 # Function to encode image to base64
