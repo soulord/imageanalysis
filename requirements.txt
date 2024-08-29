@@ -1,2 +1,8 @@
-langchain_openai
 streamlit
+streamlit_chat
+tabulate
+langchain==0.0.353
+langchain_openai
+langchain-community
+langchain_experimental
+
