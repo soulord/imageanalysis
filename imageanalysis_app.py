@@ -1,12 +1,13 @@
 import base64
 from PIL import Image as PILImage
-from langchain_openai import OpenAI
+from langchain_openai import ChatOpenAI
+from openai import OpenAI
 import streamlit as st
 
 
 api_key = "sk-proj-ReIwb6sECBqdpCkiqSq8T3BlbkFJYzLbXtecaS12V7yMpJLX"
 
-OpenAI.api_key = api_key
+openai.api_key = api_key
 
 
 # Function to encode image to base64
@@ -15,7 +16,7 @@ def encode_image64(uploaded_file):
 
 # Function to analyze the image description
 def analyze_image(prompt, base64_image):
-    response = OpenAI.chat.completions.create(
+    response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
         temperature=0,
         messages=[
