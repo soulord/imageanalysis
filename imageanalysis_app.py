@@ -16,7 +16,7 @@ def encode_image64(uploaded_file):
 # Function to analyze the image description
 def analyze_image(prompt, base64_image):
     response = OpenAI.ChatCompletion.create(
-        model="gpt-4o-mini",
+        model="gpt-3.5-turbo",
         temperature=0,
         messages=[
             {"role": "system", "content": "You are an assisstant."},
